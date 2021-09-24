@@ -1,0 +1,37 @@
+body {
+    background-color: #F3ECB3;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+    color: #222F45;
+}
+
+/* unvisited link */
+a:link {
+    color: #07C9DE;
+  }
+  
+/* visited link */
+a:visited {
+color: #07C9DE;
+}
+
+/* mouse over link */
+a:hover {
+color: #14786C;
+}
+
+/* selected link */
+a:active {
+color: #14786C;
+}
+
+#table {
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+ul {
+    text-align: left;
+}
