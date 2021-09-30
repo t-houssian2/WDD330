@@ -81,6 +81,24 @@ noteList = [
     `To update css .style.border = "red 2px solid";`,
     "superman.style.backgroundColor = 'blue';",
     "superman.style.display = 'none'; to hide an element",
+    `document.body.addEventListener("click", doSomething); to add listener to the body`,
+    `const mouseParagraph = document.getElementById('mouse');
+    mouseParagraph.addEventListener('mouseover', highlight);
+    - To add mouse listners mouseout, mousemove`,
+    `For click and keydown
+    addEventListener('keydown', (event) => {
+        if (event.key === 'c' && event.ctrlKey) {
+        console.log('Action canceled!');
+        }
+        });
+    addEventListener('click', (event) => {
+            if (event.shiftKey) {
+            console.log('A Shifty Click!');
+            }
+            });`,
+    "touchstart,  touchend, touchmove, touchenter, touchleave, touchcancel",
+    "",
+    ".removeEventListener, preventDefault()",
     
 ]
 
