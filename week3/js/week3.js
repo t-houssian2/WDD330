@@ -97,9 +97,13 @@ noteList = [
             }
             });`,
     "touchstart,  touchend, touchmove, touchenter, touchleave, touchcancel",
-    "",
+    "touches.length, touch.screenX and touch.screenY to find the coordinates of the touch point.",
+    ".touches[0], touch.radiusX and touch.radiusY ",
+    `touch.force ,
+    which returns the amount of pressure being applied by the touch as a value
+    between 0 and 1 .`,
     ".removeEventListener, preventDefault()",
-    
+    "touch.identifier property to get each Id",
 ]
 
 noteList.forEach(function(note){
