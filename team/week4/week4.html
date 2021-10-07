@@ -76,7 +76,10 @@
 const container=document.getElementById("container");
 let player_one_turn=true;
 let one_winner=false;
-container.addEventListener('click',event =>{
+container.addEventListener('click',clickManager);
+container.addEventListener('touchend',clickManager);
+
+function clickManager(event){
 	console.log(event.target);
 	square=document.getElementById(event.target.id);
 	if(!(square.innerHTML==="X"||square.innerHTML==="O") && square.classList.contains("square") && !one_winner){
@@ -94,7 +97,7 @@ container.addEventListener('click',event =>{
 		player_one_turn=true;
 	}
 }
-})
+}
 
 function refreshPage(){
     window.location.reload();
