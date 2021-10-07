@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+
+<style>
+    .square{
+        background-color: rgb(0, 217, 255);
+        height: 12em;
+        width: 12em;
+    }
+    #container{
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-template-rows: auto auto auto;
+        justify-content: center;
+	}
+    #s1.square, #s4{
+        border-right:solid black 3px;
+        border-bottom:solid black 3px;
+        
+    }
+    #s2, #s5{
+        border-bottom:solid black 3px;
+    }
+
+    #s7.square{
+        border-right:solid black 3px;
+        
+    }
+    #s3.square, #s6.square{
+        border-left:solid black 3px;
+        border-bottom:solid black 3px;
+        
+    }
+   
+    #s9.square{
+        border-left:solid black 3px;
+    }
+    div:hover.square {
+    animation: myfirst 3s 1;
+    }
+
+    @keyframes myfirst
+    {
+        0%      {background:coral;}
+        25%     {background:rgb(0, 255, 21);}
+        75%     {background:rgb(0, 255, 21);}
+        100%    {background:coral;}
+    }
+</style>
+
+
+<div id="container">
+    <div id="s1" class="square"></div>
+    <div id="s2" class="square"></div>
+    <div id="s3" class="square"></div>
+    <div id="s4" class="square"></div>
+    <div id="s5" class="square"></div>
+    <div id="s6" class="square"></div>
+    <div id="s7" class="square"></div>
+    <div id="s8" class="square"></div>
+    <div id="s9" class="square"></div>
+</div>
+
+<button type="submit" onclick="refreshPage()"> Refresh </button>
+
+
+
+<script>
+const container=document.getElementById("container");
+let player_one_turn=true;
+let one_winner=false;
+container.addEventListener('click',event =>{
+	console.log(event.target);
+	square=document.getElementById(event.target.id);
+	if(!(square.innerHTML==="X"||square.innerHTML==="O") && square.classList.contains("square") && !one_winner){
+		
+	if(player_one_turn)
+	{
+		square.innerHTML="X";
+		check_game_state();
+		player_one_turn = false;
+	}
+	else
+	{
+		square.innerHTML="O";
+		check_game_state();
+		player_one_turn=true;
+	}
+}
+})
+
+function refreshPage(){
+    window.location.reload();
+}
+function check_game_state(){
+	let routes=[
+		["s1","s2","s3"],
+		["s4","s5","s6"],
+		["s7","s8","s9"],
+		["s1","s4","s7"],
+		["s2","s5","s8"],
+		["s3","s6","s9"],
+		["s1","s5","s9"],
+		["s3","s5","s7"]
+	];
+	for (route in routes){
+		let eleVal =[];
+		eleVal[0]=document.getElementById(routes[route][0]).innerHTML;
+		eleVal[1]=document.getElementById(routes[route][1]).innerHTML;
+		eleVal[2]=document.getElementById(routes[route][2]).innerHTML;
+		if(eleVal.includes('X')||eleVal.includes('O')){
+
+			if(eleVal[0] == eleVal[1] && eleVal[1] == eleVal[2])
+			{
+				//victory
+				if(player_one_turn){
+					alert("Player 1 is the winner!");
+				}
+				else{
+					alert("Player 2 is the winner!");
+				}
+				one_winner=true;
+				return;
+			}
+		}
+	}
+}
+</script>
+    
+    
+</body>
+</html>
