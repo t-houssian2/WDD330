@@ -19,7 +19,7 @@ const links = [
     },
     {
       label: "Teams",
-      url: "team/week4.html"
+      url: "team/week4/week4.html"
     }
   ]
 
