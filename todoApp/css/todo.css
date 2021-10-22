@@ -1,0 +1,91 @@
+body{
+    display: grid;
+    grid-template-rows: 0.2fr auto 0.2fr;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#div1 {
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-style: solid;
+}
+
+li.tasks {
+    display: grid;
+    grid-template-columns: 0.1fr auto 0.05fr;
+    border-bottom-style: solid;
+    margin-top: 1em;
+}
+
+.tasks p{
+    margin-left: 0.5em;
+}
+
+#bottomLi {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-right: 1em;
+}
+
+#bottomLi p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bottomLi button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+ul {
+    width: 100%;
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
+
+#contentButton {
+    width: 1.5em;
+    height: 1.5em;
+    text-align: left;
+    margin-left: 0.5em;
+    font-size: 1.2em;
+}
+
+#removeButton {
+    width: 3em;
+    height: 3em;
+    margin-right: 0.5em;
+}
+
+#div2 {
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 5em;
+}
+
+input {
+    width: 80%;
+    height: 1.5em;
+    font-size: 2em;
+}
+
+#div2 button {
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 2em;
+}
