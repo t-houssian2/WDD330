@@ -30,8 +30,8 @@ const links = [
       url: "todoApp/todo.html"
     },
     {
-      label: "Week6 notes",
-      url: "week6/index.html"
+      label: "Week7 notes",
+      url: "week7/index.html"
     },
   ]
 
