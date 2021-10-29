@@ -28,7 +28,11 @@ const links = [
     {
       label: "To Do App",
       url: "todoApp/todo.html"
-    }
+    },
+    {
+      label: "Week6 notes",
+      url: "week6/index.html"
+    },
   ]
 
 links.forEach(function(link){
