@@ -33,6 +33,10 @@ const links = [
       label: "Week7 notes",
       url: "week7/index.html"
     },
+    {
+      label: "Star Wars!",
+      url: "team/week8/week8.html"
+    },
   ]
 
 links.forEach(function(link){
