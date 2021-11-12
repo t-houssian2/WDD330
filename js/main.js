@@ -41,6 +41,10 @@ const links = [
       label: "Week8 notes",
       url: "week8/index.html"
     },
+    {
+      label: "JS Drums",
+      url: "team/week9/index-START.html"
+    }
   ]
 
 links.forEach(function(link){
