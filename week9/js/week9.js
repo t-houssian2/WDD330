@@ -81,3 +81,7 @@ noteList.forEach(function(note){
 });
 
 notes.appendChild(points)
+let practice = document.createElement("a")
+practice.textContent = "Practice"
+practice.setAttribute('href', "practice.html")
+notes.appendChild(practice)

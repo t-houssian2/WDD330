@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/practice.css"> -->
+    <title>Practice week 9</title>
+</head>
+<body>
+    <a href="https://www.quackit.com/javascript/examples/sample_popup.cfm" onclick="basicPopup(this.href);return false">Open a popup window</a>
+    <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
+    <p>Playing a Video using the video element</p>
+    <video src='videoplayback.mp4' controls>
+      Your browser does not support the video element.
+      </video>
+    <br><p>
+      Testting Out the Audio Element
+    </p>
+    <audio src='Hear Him.mp3' controls>
+        Your browser does not support the audio element.
+    </audio>
+</body>
+<script src="js/practice.js"></script>
+</html>
