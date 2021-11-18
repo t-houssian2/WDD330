@@ -2,7 +2,9 @@ var notes = document.getElementById("notes");
 
 let overview = document.createElement("p");
 overview.textContent = `
-    Again this week I really enjoyed the team activity! 
+    Again this week I really enjoyed the team activity! I also learned a bunch about
+    fetch and client side validaiton. I already knew how to do this with html,
+    but I didn't know about css or javascript.
 `;
 notes.appendChild(overview)
 
@@ -49,7 +51,7 @@ noteList = [
     `Use client side validation to protect the data comming thorugh`,
     `required, max, min, step, pattern`,
     `input:invalid for css invalid changes`,
-    
+
 
 ]
 
