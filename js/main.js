@@ -53,6 +53,10 @@ const links = [
       label: "Week10 notes",
       url: "week10/index.html"
     },
+    {
+      label: "Religion And Sports",
+      url: "https://religion-sports.github.io/religionandsports/index.html"
+    },
   ]
 
 links.forEach(function(link){
